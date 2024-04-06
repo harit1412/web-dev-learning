@@ -1,7 +1,9 @@
+// Time :- 00:00:00
+;"use strict"
 const AccountID = 123;
 let accountEmail = "harit@google.com";
 var accountpassword = "12345";
-accountCity = "Jaipur";
+// accountCity = "Jaipur";
 // console.log(AccountID);
 // console.table([AccountID,accountEmail,accountpassword,accountCity])
 
@@ -26,5 +28,11 @@ let accountstate;
 
 // console.log("ss");
 
+a = "aaa"
+let num = Number(a)
+console.log(num);
+console.log(typeof num);
 
-console.log(typeof (1<<433))
+//
+
+// Time :- 1:14:50
