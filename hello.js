@@ -1,4 +1,3 @@
-"use strict";
 const AccountID = 123;
 let accountEmail = "harit@google.com";
 var accountpassword = "12345";
@@ -23,6 +22,9 @@ let accountstate;
 
 // alert("hello")  // we are using nodejs , not browser
 
-console.log(1 + 2);
+// console.log(1 + 2);
 
-console.log("ss");
+// console.log("ss");
+
+
+console.log(typeof (1<<433))
