@@ -10,9 +10,13 @@ const obj = {
     islogin : false,
     lastLogin : ["monday","tuesday"]
 }
-
-console.log(obj[mysym]);
+Object.freeze(obj)
+obj.name = "yash"
+console.log(obj);
 // console.log(obj.name);
 // console.log(obj["name"]);
+
+// 3:56:00
+
 
 
