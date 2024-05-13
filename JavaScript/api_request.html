@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .user-card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .user-card img {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    .user-card .user-info {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .user-card .user-info h3 {
+        margin: 0;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .user-card .user-info p {
+        margin: 5px 0;
+        color: #666;
+    }
+
+    .user-card .user-info .followers {
+        color: #00f;
+        font-weight: bold;
+    }
+</style>
+
+<body style="background-color : #212121; color : whitesmoke;">
+   
+</body>
+<script>
+    const urlreq = "https://api.github.com/users/hiteshchoudhary";
+    const xhr = new XMLHttpRequest()
+    xhr.onreadystatechange= function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4)
+        {
+            const data = JSON.parse(xhr.responseText);
+            console.log(data);
+            const card = document.createElement('div')
+            card.className = "user-card"
+            card.innerHTML = `<img src=${data.avatar_url} alt="User Image">
+        <div class="user-info">
+            <h3>${data.login}</h3>
+            <p class="followers">Followers: ${data.followers}</p>`
+            // console.log(card);
+            document.body.appendChild(card)
+            
+        }
+    } 
+    xhr.open('GET',urlreq);
+    xhr.send();
+   
+</script>
+</html>
