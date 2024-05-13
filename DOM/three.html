@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color : #212121; color : whitesmoke;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(name)
+    {
+       const newlang = document.createElement('li');
+    //    console.log(newlang);
+       const textnode = document.createTextNode(name);
+       newlang.appendChild(textnode);
+       const all_lang = document.querySelector('.language')
+       all_lang.append(newlang)
+    }
+
+    addLanguage("Java");
+    addLanguage("C++");
+    addLanguage("Python");
+
+
+    const changlang = document.querySelector("li:nth-child(2)")
+    console.log(changlang.innerHTML)
+
+    // changlang.innerHTML="Ruby"
+    const replang = document.createElement('li')
+    replang.appendChild(document.createTextNode('Ruby'))
+    console.log(replang);
+
+    changlang.replaceWith(replang)
+
+    replang.outerHTML="<li>TypeScript</li>"
+
+    const lastlang = document.querySelector("li:last-child")
+    console.log(lastlang);
+
+    lastlang.remove();
+
+
+
+
+
+</script>
+</html>

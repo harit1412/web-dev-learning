@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Hello Harit</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    const sayHello = () => {
+        console.log("Hello");
+    }
+    let HelloInterval;
+    
+    document.querySelector('#stop').addEventListener('click',(event)=>{
+        clearInterval(HelloInterval)
+    })
+
+    document.querySelector('#start').addEventListener('click',(event)=>{
+       HelloInterval = setInterval(sayHello, 1000);
+    })
+</script>
+
+</html>

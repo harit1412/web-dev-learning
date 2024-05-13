@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Magic</title>
+</head>
+<body style="background-color : #212121;color:whitesmoke">
+    <h1>Click a key</h1>
+    <div class="NewData">
+        <table class="table">
+            <tr>
+                <th>Key</th>
+                <th>KeyCode</th>
+                <th>Code</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    window.addEventListener('keydown',(e)=>{
+        console.log(e.key);
+        const newrow = document.createElement('tr');
+        const tbl = document.querySelector(".table")
+        newrow.innerHTML = `<th>${e.key}</th><th>${e.keyCode}</th><th>${e.code}</th>`
+        tbl.appendChild(newrow)
+        console.log(tbl);
+   })
+</script>
+
+</html>

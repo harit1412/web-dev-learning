@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+</head>
+<body>
+    <h1> Change Background Color each second by clicking Start Button</h1>
+    <button id="start">Start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const randColor = () => {
+return "#" + Math. floor(Math. random()*16777215). toString(16). padStart(6, '0'). toUpperCase();
+}
+let colorchange;
+document.querySelector('#start').addEventListener('click',(event)=>{
+    colorchange = setInterval(()=>{
+        document.body.style.backgroundColor=randColor();
+    },200)
+})
+
+document.querySelector('#stop').addEventListener('click',(event)=>{
+    clearTimeout(colorchange);
+})
+
+
+
+</script>
+</html>
